@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* div {
+            width: 200px;
+            height: 200px;
+            background-color: navy;
+            /* 对元素的内容微调，用相对定位： */
+        /* position: relative;
+            相对于元素自身的位置向左走;
+            left: 200px;
+            top: 200px; */
+        /* }
+
+        p {
+            width: 300px;
+            height: 200px;
+
+            background-color: palevioletred;
+        } */
+        .di {
+            width: 200px;
+            height: 200px;
+            background-color: rebeccapurple;
+            margin: auto;
+            position: relative;
+        }
+        /* 绝对定位多适用于页面组合元素之间的位置的确定，如果图片中下方的位置的文字
+        轮播图中的图标，搜索框中的搜索图标 */
+        .di>div {
+            width: 20px;
+            height: 20px;
+            background-color: tan;
+            position: absolute;
+            right: 120px;
+            bottom: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div>
+            <p></p>
+    </div> -->
+    <div class="di">
+        <div></div>
+    </div>
+
+</body>
+
+</html>
