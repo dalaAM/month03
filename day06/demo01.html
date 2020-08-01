@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id='ipt'>
+    <button id="btn">提取用户名和服务商</button>
+    <table>
+        <thead>
+            <tr>
+                <th>用户名</th>
+                <th>服务商</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="u"></td>
+                <td id="t"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        // var ipt = document.getElementById('ipt')
+        // var btn = document.getElementById('btn')
+        // var td1 = document.getElementById('u')
+        // var td2 = document.getElementById('t')
+        // btn.onclick = function () {
+        //     var str = ipt.value;
+        //     var index = str.indexOf('@');
+        //     var uname = str.substring(0, index);
+        //     var server = str.substring(index + 1);
+        //     td1.innerText = uname
+        //     td2.innerText = server
+        // }
+
+
+
+
+        var ipt = document.getElementById('ipt')
+        var btn = document.getElementById('btn')
+        var td1 = document.getElementById('u')
+        var td2 = document.getElementById('t')
+        btn.onclick = function () {
+            while (true) {
+            var str = ipt.value;
+            var index = str.split('@');
+            td1.innerText = index[ 0 ]
+            td2.innerText = index[ 1 ]
+                
+            }
+            
+        }
+
+    </script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background-color: burlywood;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <button class="btn1">隐藏</button>
+    <button class="btn2">淡隐</button>
+    <button class="btn3">上推</button>
+
+    <script src="../day08/js/jquery.min.js"></script>
+    <script>
+        $('.btn1').click(function () {
+            if ($(this).text() == '隐藏')
+            {
+                $('div').hide(1000, function () {
+                    //当内容全部隐藏完执行
+                    $('.btn1').text('显示')
+                })
+            }
+            else
+            {
+                $('div').show(1000, function () {
+                    $('.btn1').text('隐藏')
+                })
+            }
+        })
+
+        $('.btn2').click(function () {
+            if ($(this).text() == '淡隐')
+            {
+                $('div').fadeOut(1000, function () {
+                    //当内容全部隐藏完执行
+                    $('.btn2').text('淡现')
+                })
+            }
+            else
+            {
+                $('div').fadeIn(1000, function () {
+                    $('.btn2').text('淡隐')
+                })
+            }
+        })
+
+        $('.btn3').click(function () {
+            if ($(this).text() == '上推')
+            {
+                $('div').slideUp(1000, function () {
+                    //当内容全部隐藏完执行
+                    $('.btn3').text('下拉')
+                })
+            }
+            else
+            {
+                $('div').slideDown(1000, function () {
+                    $('.btn3').text('上推')
+                })
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>

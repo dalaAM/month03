@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1 id="tittle">登黄鹤楼</h1>
+        <ul>
+            <li class="items">白日依山进</li>
+            <li class="items"> 黄河如还刘</li>
+            <li>与穷潜力木</li>
+            <li>更上一层楼</li>
+            <li class="items"> 黄河如还刘</li>
+            <li>与穷潜力木</li>
+        </ul>
+    </div>
+    <script src="../day08/js/jquery.min.js"></script>
+    <script>
+        // $('#tittle').css('color', 'red').css('text-align', 'center');
+        // $('.items').css('background-color', 'yellow');
+        // //找到items类后面第一个兄弟元素，如果是li变红
+        // $('.items li').css('color', 'red');
+        // $('.items~li').css('text-align', 'center');
+
+        // $('.items:first').css('text-align', 'center');  //匹配第一个元素 
+        // $('.items:last').css('text-align', 'center'); // 匹配最后一个元素
+        // $('li:odd').css('text-align', 'center');//匹配奇数下标对应的元素
+        // $('li:even').css('text-align', 'center');//匹配偶数下标对应的元素
+        // $('li:lt(3)').css('text-align', 'center');// 匹配小于指定下标的元素
+        // $('li:gt(3)').css('text-align', 'center');//匹配大于指定下标对应的元素
+        $('li:not(.items)').css('text-align', 'center');//匹配奇数下标对应的元素
+
+    </script>
+</body>
+
+</html>

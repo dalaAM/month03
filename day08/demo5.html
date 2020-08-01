@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>追加，删除元素</title>
+</head>
+
+<body>
+    <button id="btn">remove</button>
+    <script src="../day08/js/jquery.min.js"></script>
+    <script>
+        $('body').append('<div></div>')
+        $('body').prepend('<div id ="title">xinjian</div>')
+        $('#title').after('<div >loxia</div>')
+        $('#title').before('<div >loshang</div>')
+
+        $('#btn').click(function () {
+            $('div').remove()
+        })
+        $('title').ajaxSuccess('dfdf')
+
+
+
+    </script>
+</body>
+
+</html>

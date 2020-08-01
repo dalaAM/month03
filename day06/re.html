@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>正则表达式</title>
+</head>
+
+<body>
+    <script>
+        //正则表达式的匹配模式， i忽略大小写，g查找全部
+        var reg1 = /this/i;
+        var reg2 = new RegExp('this', 'ig');
+
+
+
+        var str1 = 'This Is a test string';
+        console.log(str.replace(reg2, 'that'))
+        console.log(reg2.test(str1));  //检测字符串是否有符合正则表达式的内容
+        console.log(str.match('this'))
+        console.log(str.match(reg2))
+    </script>
+</body>
+
+</html>

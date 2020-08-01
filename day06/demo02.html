@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p>span {
+            background-color: brown;
+            color: cornsilk;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="key" type="text">
+    <button id="bin">查找</button>
+    <p id="word">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id enim, iure quos libero velit sequi doloribus
+        tenetur sed qui quam, deserunt necessitatibus dignissimos nemo quod recusandae saepe obcaecati, in vel.
+    </p>
+    <script>
+        var key = document.getElementById('key');
+        var bin = document.getElementById('bin');
+        var word = document.getElementById('word');
+        bin.onclick = function () {
+            var reg = new RegExp(key.value, 'ig')
+            var str = word.innerText
+            reg.test(str) ? alert('有匹配的内容') : alert('没有匹配的内容')
+            var span = str.replace(reg, '<span> ' + key.value + '</span>');
+            word.innerHTML = span
+
+
+
+
+        }
+    </script>
+
+</html>

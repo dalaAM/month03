@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>array数组</title>
+    <script>
+        // var arr = new Array(5);
+        // console.log(arr);
+        // var arr = [ 1, 4, 3, 2, 5, 4, 7, 8 ];
+        // console.log(arr[ arr.length - 1 ])
+        // console.log(arr.splice(5, 4));//从索引值为3开始删除总共删除两个元素,并且返回删除的元素，变相实现索引的内容
+        // arr[ 2 ] = 3.14
+        // console.log(arr)
+        // arr[ 10 ] = 20
+        // console.log(arr)
+        // for (var i in arr)
+        // {
+        //     console.log(i, arr[ i ])
+        // }
+        // var arr = [ 1, 4 ];
+        // arr.push(4, 7, 8)//添加元素
+        // console.log(arr, arr.push())
+
+
+        var arr = [ 1, 4 ];
+        arr.unshift(4, 7)//开头增加元素
+        arr.push(5, 6, 7)//末尾增加元素
+        arr.splice(3, 0, 3, 5, 4, 7) //在任意位置上增加元素
+        // var last = arr.pop()//移除末尾的元素
+        // var first = arr.shift()//移除开头的元素
+        // var res = splice(3,2)在任意位置上删除元素
+
+        arr.sort(sortASC)
+        console.log(arr)
+        function sortASC(a, b) {
+            return a - b
+        }
+
+        arr.sort(sortDESC)
+        console.log(arr)
+        function sortDESC(a, b) {
+            return b - a
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

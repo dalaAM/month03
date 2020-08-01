@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>遍历数组和对象</title>
+</head>
+
+<body>
+    <script src="../day08/js/jquery.min.js"></script>
+    <script>
+
+        // 遍历数组
+        var arr = [ 1, 2, 3, 4, 5, 6 ]
+        $.each(arr, function (i, o) {
+            console.log(i, o)
+        })
+        //遍历对象
+        var obj = { name: "usm", age: "18", sec: "nan" }
+        $.each(obj, function (i, o) {
+            console.log(i, o)
+        })
+
+    </script>
+</body>
+
+</html>

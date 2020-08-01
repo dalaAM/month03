@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮播图</title>
+    <style>
+        /* 父容器 */
+        #sildeBar {
+            width: 739px;
+            height: 419px;
+            position: relative;
+        }
+
+        /* 所有要轮播的图片 */
+        #sildeBar>img {
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            opacity: 0;
+        }
+
+        /* 要显示的图片 */
+        #sildeBar>img.active {
+            opacity: 1;
+            z-index: 2;
+        }
+
+        /* 左右小箭头 */
+        #ll,
+        #rr {
+            position: absolute;
+            z-index: 6;
+            top: 50%;
+            margin-top: -20px;
+        }
+
+        #rr {
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sildeBar">
+        <img class="items active" src="../imgs/gm1-6.jpg" alt="">
+        <img class="items" src="../imgs/gm2-6.jpg" alt="">
+        <img class="items" src="../imgs/gm3-6.jpg" alt="">
+        <img class="items" src="../imgs/gm4-6.jpg" alt="">
+        <img class="items" src="../imgs/gm5-6.jpg" alt="">
+        <div>
+            <img id="ll" src="../imgs/l1-6.png" alt="">
+            <img id="rr" src="../imgs/r1-6.png" alt="">
+        </div>
+    </div>
+
+    <script>
+        var ll = document.getElementById('ll');
+        var rr = document.getElementById('rr');
+        var imgs = document.getElementsByClassName('items');
+        var img = document.getElementById('sildeBar');
+
+        var i = 0;
+        ll.onclick = function () {
+            imgs[ i ].className = 'items'
+            i--;
+            if (i == -1)
+            {
+                i = imgs.length - 1
+            }
+            var s = imgs[ i ].className = 'items active'
+            console.log(s)
+
+        }
+
+        rr.onclick = function () {
+            imgs[ i ].className = 'items'
+            i++;
+            if (i == imgs.length)
+            {
+                i = 0;
+            }
+            imgs[ i ].className = 'items active'
+        }
+
+        var timeID = setInterval(rr.onclick, 1500)
+        //鼠标移出图片   启动定时器
+        img.onmouseout = function () {
+            timeID = setInterval(rr.onclick, 1500)
+        }
+
+        //鼠标移入图片   关闭定时器
+        img.onmouseover = function () {
+            clearInterval(timeID)
+
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

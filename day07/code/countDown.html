@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>倒计时</title>
+</head>
+
+<body>
+    <input type="text" id='te'>
+    <button id='btn_start'>开始倒计时</button>
+    <button id="btn_end">结束倒计时</button>
+    <h1 id='h1'></h1>
+
+    <script>
+        // 计算当前时间距离今天中午12:00还有多久  显示在页面上
+        // 时：分：秒
+        var h1 = document.getElementById('h1')
+        var te = document.getElementById('te')
+        var btn_start = document.getElementById('btn_start')
+        var btn_end = document.getElementById('btn_end')
+
+        // var end = new Date('2020/07/31 15:00:00')
+
+        function t() {
+            function addZero(num) {
+                return num < 10 ? '0' + num : num
+            }
+
+            var start = new Date()
+            var end = new Date(te.value)
+            var leftTime = parseInt((end - start) / 1000)
+            var h = addZero(parseInt(leftTime / 3600))
+            var m = addZero(parseInt(leftTime % 3600 / 60))
+            var s = addZero(leftTime % 60)  
+            h1.innerHTML = ('时间是：' + `${ h }:${ m }:${ s }`)
+
+
+        }
+
+        //周期性定时器
+        btn_start.onclick = function st() {
+            timerID = setInterval(t, 1000)
+        }
+        btn_end.onclick = function en() {
+            clearInterval(timerID)
+            
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // 休息10:58~10:15
+        // 显示到页面上(补零)
+
+    </script>
+</body>
+
+</html>
