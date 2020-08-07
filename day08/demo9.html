@@ -5,15 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>级联下拉菜单</title>
+    <script src="../day08/js/jquery.min.js"></script>
+    <script src="../day08/js/data.js"></script>
+
 </head>
 
 <body>
-    <script src="../day08/js/jquery.min.js"></script>
-    <script src="../day08/js/data.js"></script>
+    <select name="" id="prov"></select>
+    <select name="" id="city"></select>
+    <select name="" id="area"></select>
     <script>
         console.log(data)
+        $('#prov').html(' <option  value="">请选择</option>')
+        $('#city').html(' <option  value="">请选择</option>')
+        $('#area').html(' <option  value="">请选择</option>')
+        //显示省份名内容
+        $.each(data, function (i, o) {
+            $('#prov').append(`<option  value="${ o.provId }">${ o.provname }</option>`)
+            console.log(`${ o.provId }${ o.provname }`)
+        })
+        $('#prov').on('change', function () {
+            $.each(data, function (i, e) {
+                if ($('#prov').val() == e.provId)
+                {
+                    $('#prov').append(`<option  value="0">请选择</option>`)
+                    $.each(e.citys, function (i, es) {
+                        $('#city').append(`<option  value="${ es.cityId }">${ es.cityname }</option>`)
+                    })
+                }
+            })
+        })
+        if ($('#prov').val() == 0)
+        {
+            $('#prov').append(`<option  value="0">请选择</option>`)
+        }
+        $('#city').on('change', function () {
+            if ($('#city'.val() ==e.cityId)) {
+            console.log()//如果
 
+        })
     </script>
 </body>
 

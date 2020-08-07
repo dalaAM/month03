@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入外部css文件 -->
+    <link rel="stylesheet" href="../project/css/index.css">
+    <!-- 引入外部jq文件 -->
+    <script src="../project/js/jquery.min.js"></script>
+    <!-- 引入博客列表文件 -->
+    <script src="../project/js/blogs.data.js"></script>
+    <!-- 引入轮播图数据文件 -->
+    <script src="../project/js/fader.data.js"></script>
+    <!-- 引入轮播图jq插件文件 -->
+    <script src="../project/js/jquery.easyfader.min.js"></script>
+    <!-- 引入外部自定义js文件 -->
+    <script src="../project/js/index.js"></script>
+    <!-- 引入css补充样式 -->
+    <link rel="stylesheet" href="../project/css/easyfader.css">
+</head>
+
+<body>
+    <!-- <div id="header"></div>
+    <div id="main"></div>
+    <div id="footer"></div> -->
+    <!-- HTML5 规范的语义化标签 -->
+    <header>
+        <!-- 导航栏 -->
+        <nav>
+            <!-- logo -->
+            <h1 class="logo">
+                <a href="#">个人博客</a>
+            </h1>
+            <!-- 导航菜单 -->
+            <ul>
+                <li>
+                    <a href="#">网站首页</a>
+                </li>
+                <li>
+                    <a href="#">文章列表</a>
+                </li>
+                <li>
+                    <a href="#">我的相册</a>
+                </li>
+                <li>
+                    <a href="#">留言</a>
+                </li>
+                <li>
+                    <a href="#">关于我</a>
+                </li>
+                <li>
+                    <a href="#">发表博客</a>
+                </li>
+            </ul>
+            <!-- 登录注册 -->
+            <div>
+                <a href="#" id="register">注册</a>
+                <a href="#" id="login">登录</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <!-- 左侧 轮播图 -->
+            <div class="banner">
+                <!-- 轮播图父元素 -->
+                <ul class="fader">
+                    <li class="fader_controls">
+                        <!-- 左右箭头 -->
+                        <div class=" page prev" data-target="prev">&lt;</div>
+
+                        <div class="page next" data-target="prev">&gt;</div>
+                        <!-- 轮播图页标 -->
+                        <ul class="pager_list">
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- 右侧 侧边图片 -->
+            <ul class="toppic">
+                <li>
+                    <a href="#">
+                        <i>
+                            <img src="../project/images/toppic01.jpg" alt="">
+                        </i>
+                        <div>linux升级py3,安装pip,svn</div>
+                        <span>Linux</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i>
+                            <img src="../project/images/toppic02.jpg" alt="">
+                        </i>
+                        <div>精通Python编程--Python深入浅出教程</div>
+                        <span>Python</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- 清除上方元素的浮动并且添加距离 -->
+            <div class="clear"></div>
+        </div>
+        <!-- 博客列表 -->
+        <div class="blogsbox">
+            <!-- 每一条博客 -->
+            <div class="blogs">
+                <!-- 博客标题 -->
+                <h3 class="blogtitle">
+                    <a href="#">
+                        python语言在人工智能(AI)中的优势
+                    </a>
+                </h3>
+                <!-- 博客图片 -->
+                <div class="blogpic">
+                    <a href="#">
+                        <img src="../project/images/a.jpg" alt="">
+                    </a>
+                </div>
+                <p class="blogstext">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi mollitia quam sapiente laborum, illo
+                    eius libero vitae voluptatem adipisci omnis totam ratione eveniet odit quisquam a, exercitationem
+                    at. Nostrum, quaerat.
+                </p>
+                <!-- 信息列表 -->
+                <ul class="info_list">
+                    <li class="author"><a href="">皮皮虾</a></li>
+                    <li class="lmname"><a href="">时光易老</a></li>
+                    <li class="timer"><a href="">2019-9-10</a></li>
+                    <li class="view"><a href="">已阅读</a></li>
+                    <li class="like"><a href="">18555</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="blogsbox">
+            <!-- 每一条博客 -->
+            <div class="blogs">
+                <!-- 博客标题 -->
+                <h3 class="blogtitle">
+                    <a href="#">
+                        python语言在人工智能(AI)中的优势
+                    </a>
+                </h3>
+                <!-- 博客图片 -->
+                <div class="blogpic">
+                    <a href="#">
+                        <img src="../project/images/a.jpg" alt="">
+                    </a>
+                </div>
+                <p class="blogstext">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi mollitia quam sapiente laborum, illo
+                    eius libero vitae voluptatem adipisci omnis totam ratione eveniet odit quisquam a, exercitationem
+                    at. Nostrum, quaerat.
+                </p>
+                <!-- 信息列表 -->
+                <ul class="info_list">
+                    <li class="author"><a href="">皮皮虾</a></li>
+                    <li class="lmname"><a href="">时光易老</a></li>
+                    <li class="timer"><a href="">2019-9-10</a></li>
+                    <li class="view"><a href="">已阅读</a></li>
+                    <li class="like"><a href="">18555</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="blogsbox">
+            <!-- 每一条博客 -->
+            <div class="blogs">
+                <!-- 博客标题 -->
+                <h3 class="blogtitle">
+                    <a href="#">
+                        python语言在人工智能(AI)中的优势
+                    </a>
+                </h3>
+                <!-- 博客图片 -->
+                <div class="blogpic">
+                    <a href="#">
+                        <img src="../project/images/a.jpg" alt="">
+                    </a>
+                </div>
+                <p class="blogstext">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi mollitia quam sapiente laborum, illo
+                    eius libero vitae voluptatem adipisci omnis totam ratione eveniet odit quisquam a, exercitationem
+                    at. Nostrum, quaerat.
+                </p>
+                <!-- 信息列表 -->
+                <ul class="info_list">
+                    <li class="author"><a href="">皮皮虾</a></li>
+                    <li class="lmname"><a href="">时光易老</a></li>
+                    <li class="timer"><a href="">2019-9-10</a></li>
+                    <li class="view"><a href="">已阅读</a></li>
+                    <li class="like"><a href="">18555</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            Desgin By
+            <a href="#">个人博客</a>
+            <a href="#">备案号</a>
+        </div>
+    </footer>
+</body>
+
+</html>

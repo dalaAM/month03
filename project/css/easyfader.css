@@ -1,0 +1,39 @@
+/* 轮播图补充样式 */
+
+.fader{
+    padding-top:57%;
+}
+.fader .slide{
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+.toppic li img{
+    height: 206px;
+    z-index: 1;
+    opacity: 1;
+    transition: all 0.5s;
+}
+.prev{
+    z-index: 4;
+    cursor: pointer;
+}
+.next{
+    z-index: 4;
+    cursor: pointer;
+}
+.pager_list{
+    z-index: 4;
+}
+
+/* 为轮播图设置（小园点）样式 */
+.pager_list li{
+    margin: 0 5px;
+    opacity: 0.3;
+    text-indent: -9999px;
+}
+/* 轮播图对当前的对应的li添加一个active类 */
+.pager_list  li.active , .pager_list li:hover{
+    opacity: 1;
+    cursor: pointer;
+}
